@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\title{PIA}
+\author{Team 5}
+\date{May 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\bigskip \textbf{ Find  $\int_{0}^1 f(x)dx $\ }
+
+\bigskip SOLUTION:
+
+\bigskip As team, we decided to use u substitution to get an answer, so we said that $\ f(u) + f({1-\frac{1}{u})}$ = $\arctan{u} $\ 
+
+\bigskip $\ f(u)+f(1-\frac{1}{u}) =  \arctan{u} $\ 
+
+\bigskip So, we use u= 1 - $\frac{1}{x}$ = $\frac{x-1}{x} $\
+
+\bigskip Then, we substitute the values and we get $\ f(\frac{-1}{x-1})+f(x)=\arctan(\frac{-1}{x-1}) $\ 
+
+\bigskip At this part of the moment, we analyze what we can do and we did a u-sub, that $u= \frac{-1}{x-1} $\
+
+\bigskip So, the function: $\ 1-\frac{1}{u}=1-\frac{\frac{1}{-1}}{x-1} =1+(x-1)=x $\
+
+\bigskip \textbf{Going back to the function, we substitute $u= \frac{-1}{x-1} $\ to get:}
+
+\bigskip $\ f(\frac{-1}{x-1})+f(x)=\arctan\frac{-1}{x-1}$
+
+\bigskip \textbf{Resultados obtenidos}
+
+\bigskip $\ f(x)+f(1-\frac{1}{x})=\arctan{x} $\
+
+\bigskip $\ -f(1-\frac{1}{x})-f(\frac{-1}{x-1})=-\arctan{1-\frac{1}{x}}$
+
+\bigskip $\ f(\frac{-1}{x-1})+f(x)=\arctan({\frac{-1}{x-1})}$
+
+\newpage
+
+\bigskip \textbf {With the three equations we got, we create an only function to get the definite integral}
+
+\bigskip $\ f(x)+f(1-(\frac{1}{x})-f(1-(\frac{1}{x})-f(\frac{-1}{x-1})+f(\frac{-1}{x-1})+f(x)=\arctan{x}-\arctan({1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}}$\
+
+\bigskip $\ 2f(x)=\arctan{x}-\arctan{1-(\frac{1}{x})+\arctan{(\frac{-1}{x-1})}}$
+
+\bigskip $\ f(x)=\frac{1}{2}\arctan{x}-\frac{1}{2}\arctan({1-\frac{1}{x})}+\frac{1}{2}\arctan({\frac{-1}{x-1})} $\
+
+\bigskip Find $\ \int_{0}^{1} f(x)\,dx \, f(x)=\frac{1}{2}\arctan{x}-\arctan{(1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}} $\
+
+\bigskip $\ \frac{1}{2} \int_{0}^{1} \arctan{x}-\arctan{(1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}}\,dx \, \ $\
+
+\bigskip  $\ \frac{1}{2} \int_{0}^{1} \arctan{x}+\arctan{(1-\frac{1}{x})-arc\cot{(x-1)}}\,dx \, $
+
+\bigskip $\ \int_{0}^{1} \arctan{x}\,dx \,+\frac{1}{2}\int_{0}^{1} \arctan{(\frac{1}{x}-1)}\,dx \,- \frac{1}{2}\int_{0}^{1} arc\cot{(x-1)}\,dx \, $
+
+\bigskip \textbf{Let's integrate!}
+
+\bigskip $\ \frac{1}{2} \int_{0}^{1} \arctan{(x)} \,dx \, $
+
+\bigskip \textbf{(Using integration by parts)}
+
+\bigskip $\ v= \arctan{(x)} \,\,\,\, v'=\frac{dx}{x^2+1} $\
+
+\bigskip $\ v=dx \,\,\,\,\,\,\,\,\, u=x $\
+
+\bigskip $\ =x\arctan{(x)}-\int_{0}^{1} \frac{x}{x^2+1}\,dx \,$
+
+\bigskip $\ u= x^2+1 \,\,\,\,\,\, du= 2x dx $\ 
+
+\bigskip  $\ =\frac{1}{2}x\arctan{x}-\frac{1}{4}ln(x^2+1) $\
+
+\bigskip
+\bigskip \textbf{Now let's integrate the other term} 
+
+\bigskip $\ \frac{1}{2} \int_{0}^{1} \arctan{(\frac{1}{x}-1)} \,dx \, $\
+
+\bigskip $\ v= \arctan{(\frac{1}{x}-1)}  \,\,\,\,\,\,\,\,\,\, v'=\frac{dx}{((\frac{1}{x}-1))^2+1)x^2} $\
+
+\bigskip $\ v=dx \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,u=x $\
+
+\bigskip $\ \frac{1}{2} \arctan{(\frac{1}{x}-1)}x-\frac{1}{2} \int_{0}^{1} \frac{dx}{((\frac{1}{x}-1))^2+1)x} \,dx \, $\
+
+\bigskip $\ \frac{1}{2} \int_{0}^{1} \frac{dx}{((\frac{1}{x}-1))^2+1)x} \,dx \, $\ 
+
+
+\newpage
+
+\bigskip $\ = \frac{1}{2} \int_{0}^{1} \frac{x}{x^2+(1-x)^2} \,dx \, $\ 
+
+\bigskip \textbf{Write} $\ x $\ {as} $\ \frac{1}{4} \ (2x+2(x-1))+ \frac{1}{2} $\ {and put it in separated therms} 
+
+\bigskip $\ \frac{1}{2} \int_{0}^{1} (\frac{(2x+2(x-1))}{4(x^2+(1-x)^2)} + \frac{1}{2(x^2+(1-x)^2)}) \,dx \,$\ 
+
+\bigskip $\ \frac{1}{8} \int_{0}^{1} \frac{(2x+2(x-1))}{x^2+(1-x)^2}\,dx\, + \frac{1}{2} \int_{0}^{1}\frac{1}{x^2+(1-x)^2} \,dx \,$\ 
+
+\bigskip
+
+\bigskip $\ \frac{1}{8} \int_{0}^{1} \frac{(2x+2(x-1))}{x^2+(1-x)^2}\,dx\,$\ 
+
+\bigskip \textbf{Let's make a variable substitution to integrate} 
+
+\bigskip $\ u=x^2+(1-x)^2 \,\,->\,\, \frac {du}{dx}= 2x+2(x-1) \,\,$\ 
+
+\bigskip $\ du=2x+2(x-1) \,dx\,$\
+
+\bigskip \textbf{Now replace the variables} 
+
+\bigskip $\ \frac{1}{8} \int_ \frac {du}{u} $\
+
+\bigskip $\ = \, \frac{1}{8} \ln (u) $\
+
+\bigskip \textbf{Substitute the original values}
+
+\bigskip $\ = \, \frac{1}{8} \ln (x^2+(1-x)^2)  $
+
+
+Third Equation
+\begin{equation*}
+   -\frac{1}{2}\int_{0}^{1} arctan(x-1)dx
+\end{equation*}
+
+We can apply integration by substitution:
+\begin{list}{}{}
+       \item $w=x-1$  
+       \item $dw=dx$
+\end{list}
+
+\begin{equation*}
+   -\frac{1}{2}\int_{0}^{1}\textrm{arcot}(w)dx
+\end{equation*}
+
+We can apply integration by parts: $\int {u\frac{{dv}}{{dx}}} dx = uv - \int {\frac{{du}}{{dx}}} vdx$ 
+\begin{list}{}{}
+       \item $v=\textrm{arccot}(w)$
+       \item $du = dw$
+       \item $v'=-\frac{dx}{w^2+1}
+$
+       \item $u=w$
+\end{list}
+
+\begin{equation*}
+   =(w)\textrm{arccot}(x-1)+\int_{0}^{1}\frac{w}{w^2+1}dw
+\end{equation*}
+\begin{list}{}{}
+       \item $u=w^2+1$
+       \item $du=(2w)dw$
+\end{list}
+
+Then, we integrate and we return $w$ to its original value:
+\begin{equation*}
+   =-\frac{1}{2}(w)\textrm{arccot}(x)-\frac{1}{4}ln(w^2+1)
+\end{equation*}
+
+\begin{equation*}
+   =-\frac{1}{2}(x-1)\textrm{arccot}(x-1)-\frac{1}{4}ln((x-1)^2+1)
+\end{equation*}
+
+
+\end{document} 
