@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts,latexsym,cancel}
 \title{PIA}
 \author{Team 5}
 \date{May 2021}
@@ -118,12 +119,11 @@
 \bigskip $\ = \, \frac{1}{8} \ln (x^2+(1-x)^2)  $
 
 
-Third Equation
 \begin{equation*}
    -\frac{1}{2}\int_{0}^{1} arctan(x-1)dx
 \end{equation*}
 
-We can apply integration by substitution:
+\bigskip\textbf{We can apply integration by substitution:}
 \begin{list}{}{}
        \item $w=x-1$  
        \item $dw=dx$
@@ -133,7 +133,7 @@ We can apply integration by substitution:
    -\frac{1}{2}\int_{0}^{1}\textrm{arcot}(w)dx
 \end{equation*}
 
-We can apply integration by parts: $\int {u\frac{{dv}}{{dx}}} dx = uv - \int {\frac{{du}}{{dx}}} vdx$ 
+\bigskip\textbf{We can apply integration by parts:} $\int {u\frac{{dv}}{{dx}}} dx = uv - \int {\frac{{du}}{{dx}}} vdx$ 
 \begin{list}{}{}
        \item $v=\textrm{arccot}(w)$
        \item $du = dw$
@@ -150,7 +150,7 @@ $
        \item $du=(2w)dw$
 \end{list}
 
-Then, we integrate and we return $w$ to its original value:
+\bigskip\textbf{Then, we integrate and we return $w$ to its original value:}
 \begin{equation*}
    =-\frac{1}{2}(w)\textrm{arccot}(x)-\frac{1}{4}ln(w^2+1)
 \end{equation*}
@@ -159,5 +159,36 @@ Then, we integrate and we return $w$ to its original value:
    =-\frac{1}{2}(x-1)\textrm{arccot}(x-1)-\frac{1}{4}ln((x-1)^2+1)
 \end{equation*}
 
+\bigskip \textbf{RESULT:}
+
+\begin{equation*}
+    =\frac{1}{2} x \arctan(x) +\frac{1}{2} \arctan(\frac{1}{x}-1) x -\frac{1}{4} \ln{(x^2 +1)} +\frac{1}{8} \ln{[x^2 +(x-1)^2]}
+\end{equation*}
+
+\begin{equation*}
+        +\frac{2}{4}\arctan(2x-1) -\frac{1}{2}(x-1) \text{arccot} (x-1) -\frac{1}{4}\ln{[(x-1)^2 +1]} \int_0^1
+\end{equation*}
+
+\bigskip\textbf{Compute the limits:}
+\begin{equation*}
+    =\frac{1}{2} (1) \arctan(1) +\frac{1}{2} \arctan(\frac{1}{1}-1) (1) -\frac{1}{4} \ln{(1^2 +1)} +\frac{1}{8} \ln{[1^2 +(1-1)^2]}
+\end{equation*}
+
+\begin{equation*}
+        +\frac{2}{4}\arctan[2(1)-1)] -\frac{1}{2}(1-1) \text{arccot} (1-1) -\frac{1}{4}\ln{[(1-1)^2 +1]} 
+\end{equation*}
+
+\begin{equation*}
+    -\frac{1}{2} (0) \arctan(0) -\frac{1}{2} \arctan(\frac{1}{0}-1) (0) +\frac{1}{4} \ln{(0^2 +1)} -\frac{1}{8} \ln{[0^2 +(0-1)^2]}
+\end{equation*}
+
+\begin{equation*}
+        -\frac{2}{4}\arctan[2(0)-1] +\frac{1}{2}(0-1) \text{arccot} (0-1) +\frac{1}{4}\ln{[(0-1)^2 +1]}
+\end{equation*}
+
+\bigskip\textbf{This is the final result:}
+\begin{equation*}
+    \frac{3\pi}{8} 
+\end{equation*}
 
 \end{document} 
