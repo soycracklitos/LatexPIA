@@ -2,40 +2,51 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb}
 \usepackage{amsfonts,latexsym,cancel}
-\title{PIA}
+\title{Final Project}
 \author{Team 5}
-\date{June, 2nd 2021}
+\date{June 1, 2021}
 
 \begin{document}
 
 \maketitle
-\begin{list}{}{}
-       \item MEMBERS:
-       \item ABNER ZAIR VELAZQUEZ DOMINGUEZ 1960233 ITS
-       \item ALFREDO PALACIOS TREJO 2077513 IMTC
-       \item ALFREDO PALACIOS TREJO 2077513 IMTC
-       \item JOSE CARLOS GUTIERREZ ORTEGA 1963389 IMTC
-       \item JULIO ANGEL ARIAS BARTOLO 1954467 IMTC
-       \item Group: 051 
-       \item Hour: M6 
-       \item Math II
+\begin{center}{}{}
+       \item \textbf{MEMBERS:}
+\end{center}
+\begin{list}
+        \bigskip\item ABNER ZAIR VELAZQUEZ DOMINGUEZ 1960233 ITS
+        \bigskip\item ALFREDO PALACIOS TREJO 2077513 IMTC
+        \bigskip\item JOSE CARLOS GUTIERREZ ORTEGA 1963389 IMTC
+        \bigskip\item JULIO ANGEL ARIAS BARTOLO 1954467 IMTC
 \end{list}
+\begin{center}
+       \bigskip\item \textbf{Group: 051}
+       \bigskip\item \textbf{Hour: M6} 
+       \bigskip\item \textbf{Math II}
+\end{center}
 \newpage
 \section{Equation}
 
+\textbf{Let $f$ be a function from $ (R)\,\,to\,\,(R) $ such that:}
+\begin{center}
+\bigskip $\  \forall\,x\,\neq\, f(x) + f(1-\frac{1}{x})=\arctan{x} $\ 
+\end{center}
 \bigskip \textbf{ Find  $\int_{0}^1 f(x)dx $\ }
 
 \bigskip SOLUTION:
 
-\bigskip As team, we decided to use u substitution to get an answer, so we said that $\ f(u) + f({1-\frac{1}{u})}$ = $\arctan{u} $\ 
+\bigskip \textbf{We use a system of three equations to get the final answer. Using from $\ f(x) + f(1-\frac{1}{x})$ to solve it with u-substitution}
 
-\bigskip $\ f(u)+f(1-\frac{1}{u}) =  \arctan{u} $\ 
+\bigskip PROCESS:
 
-\bigskip So, we use u= 1 - $\frac{1}{x}$ = $\frac{x-1}{x} $\
+\bigskip \textbf{As we explain before, we use u-sub} $\ f(u) + f({1-\frac{1}{u})}$ = $\arctan{u} $\ 
 
-\bigskip Then, we substitute the values and we get $\ f(\frac{-1}{x-1})+f(x)=\arctan(\frac{-1}{x-1}) $\ 
+\bigskip So, we use u = 1 - $\frac{1}{x}$ = $\frac{x-1}{x} $\
 
-\bigskip At this part of the moment, we analyze what we can do and we did a u-sub, that $u= \frac{-1}{x-1} $\
+\bigskip Substituting the values: $\ 1-\frac{1}{u}= 1-\frac{1}{\frac{x-1}{x}}=\frac{x-1}{x-1}-\frac{x}{x-1}=\frac{-1}{x-1} $
+
+\bigskip\textbf{We put the values on the equation and we get $\ f(\frac{-1}{x-1})+f(x)=\arctan(\frac{-1}{x-1}) $\  }
+
+\bigskip\textbf{For the third equation, we use the value of the u-sub used before, that $u= \frac{-1}{x-1} $\ } 
 
 \bigskip So, the function: $\ 1-\frac{1}{u}=1-\frac{\frac{1}{-1}}{x-1} =1+(x-1)=x $\
 
@@ -43,17 +54,15 @@
 
 \bigskip $\ f(\frac{-1}{x-1})+f(x)=\arctan\frac{-1}{x-1}$
 
-\bigskip \textbf{Results}
+\bigskip \textbf{Finally, we get three equations. We use the first equation as the given one. Then, the next equations are from the u-substitution answers. }
 
 \bigskip $\ f(x)+f(1-\frac{1}{x})=\arctan{x} $\
 
 \bigskip $\ -f(1-\frac{1}{x})-f(\frac{-1}{x-1})=-\arctan{1-\frac{1}{x}}$
 
 \bigskip $\ f(\frac{-1}{x-1})+f(x)=\arctan({\frac{-1}{x-1})}$
-
 \newpage
-
-\bigskip \textbf {With the three equations we got, we create an only function to get the definite integral}
+\bigskip \textbf {With these equations, we create an only function to get a final definite integral}
 
 \bigskip $\ f(x)+f(1-(\frac{1}{x})-f(1-(\frac{1}{x})-f(\frac{-1}{x-1})+f(\frac{-1}{x-1})+f(x)=\arctan{x}-\arctan({1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}}$\
 
@@ -61,15 +70,19 @@
 
 \bigskip $\ f(x)=\frac{1}{2}\arctan{x}-\frac{1}{2}\arctan({1-\frac{1}{x})}+\frac{1}{2}\arctan({\frac{-1}{x-1})} $\
 
-\bigskip Find $\ \int_{0}^{1} f(x)\,dx \, f(x)=\frac{1}{2}\arctan{x}-\arctan{(1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}} $\
+\bigskip\textbf{Defining our integral:}
 
-\bigskip $\ \frac{1}{2} \int_{0}^{1} \arctan{x}-\arctan{(1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}}\,dx \, \ $\
+\bigskip  $\ \int_{0}^{1} f(x)\,dx \, f(x)=\frac{1}{2}\arctan{x}-\arctan{(1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}} $\
+
+\bigskip $\ \frac{1}{2} \int_{0}^{1}\arctan{x}-\arctan{(1-\frac{1}{x})+\arctan{(\frac{-1}{x-1})}}\,dx \, \ $\
 
 \bigskip  $\ \frac{1}{2} \int_{0}^{1} \arctan{x}+\arctan{(1-\frac{1}{x})-arc\cot{(x-1)}}\,dx \, $
 
+\bigskip \textbf{Finally, our integral is:}
+
 \bigskip $\ \int_{0}^{1} \arctan{x}\,dx \,+\frac{1}{2}\int_{0}^{1} \arctan{(\frac{1}{x}-1)}\,dx \,- \frac{1}{2}\int_{0}^{1} arc\cot{(x-1)}\,dx \, $
 
-\bigskip \textbf{Let's integrate!}
+\bigskip \textbf{Now, we separate in parts the integral to solve it}
 
 \bigskip $\ \frac{1}{2} \int_{0}^{1} \arctan{(x)} \,dx \, $
 
@@ -202,4 +215,4 @@ $
     \frac{3\pi}{8} 
 \end{equation*}
 
-\end{document} 
+\end{document}
